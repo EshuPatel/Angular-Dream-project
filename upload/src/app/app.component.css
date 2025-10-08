@@ -1,0 +1,101 @@
+/* Background gradient with modern feel */
+.angular-demo {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #4facfe);
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  padding: 30px;
+}
+
+/* Central card container */
+.container {
+  background: linear-gradient(145deg, #ffffff, #e6e9f0);
+  color: #222;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Headings styling */
+h1 {
+  font-size: 2.4rem;
+  color: #2a5298;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/* Section headings */
+h2 {
+  color: #1e3c72;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #4facfe;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+h3, h4 {
+  color: #222;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* Highlighted text and values */
+.highlight span, h3 span, h4 span {
+  background-color: #4facfe;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 50px;
+}
+
+/* HR line */
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #1e3c72, #4facfe);
+  margin: 25px 0;
+  border-radius: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3, h4 {
+    font-size: 1rem;
+  }
+}
