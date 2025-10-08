@@ -1,0 +1,58 @@
+<div class="container">
+<h2>Structural Directives Demo</h2>
+
+
+<!-- *ngIf Example -->
+<button (click)="toggleShow()">{{ show ? 'Hide' : 'Show' }} Fruits</button>
+<p *ngIf="show">Here is the fruit list:</p>
+
+
+<!-- *ngFor Example -->
+<ul *ngIf="show">
+<li *ngFor="let fruit of fruits">{{ fruit }}</li>
+</ul>
+
+
+<!-- *ngSwitch Example -->
+<div>
+<label>Choose View: </label>
+<select [(ngModel)]="view">
+<option value="list">List</option>
+<option value="grid">Grid</option>
+</select>
+</div>
+
+
+<div [ngSwitch]="view">
+<ul *ngSwitchCase="'list'">
+<li *ngFor="let fruit of fruits">🍎 {{ fruit }}</li>
+</ul>
+
+
+<div *ngSwitchCase="'grid'" class="grid">
+<div *ngFor="let fruit of fruits" class="card">{{ fruit }}
+    
+</div>
+</div>
+<h2>Product List — ngStyle & ngClass Example</h2>
+
+    <!--
+    [ngStyle] → Dynamically styles color, font, and text decoration based on stock availability.
+    [ngClass] → Applies "expensive" or "affordable" CSS class depending on product price.
+    -->
+  <ul>
+    <li *ngFor="let p of products"
+        [ngStyle]="{
+          'color': p.inStock ? 'green' : 'red',
+          'font-weight': p.inStock ? 'bold' : 'normal',
+          'text-decoration': p.inStock ? 'none' : 'line-through'
+        }"
+        [ngClass]="highlightExpensive(p.price)">
+      {{ p.name }} — ₹{{ p.price }} 
+      <span *ngIf="!p.inStock">(Out of Stock)</span>
+    </li>
+  </ul>
+
+<p *ngSwitchDefault>Unknown view</p>
+</div>
+</div>

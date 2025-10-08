@@ -1,0 +1,62 @@
+<h1 style="color: blue;">{{title}}</h1>
+
+<div class="employee-container">  
+    <!-- Interpolation using {{}} directive-->
+     
+     <p><strong>Emp Id- {{employeeId}} - Name : {{employeeName| uppercase}} - 
+      Age  : {{employeeAge}}</strong></p>
+      
+      
+      <!-- Boolean wd *ngIf structural Directive-->
+       <p *ngIf ="isManager"> Manager Status:  Yes</p>
+       <p *ngIf ="! isManager"> Manager Status:  No</p>
+
+       <h2 *ngIf="a">Hello ngIf Structural directive</h2>
+       <h2 *ngIf="!a"> Thank you!</h2>
+
+
+       <!--Array with *ngIf structural Directive-->
+       <h3>Skills: </h3>
+       <ul>
+        <li *ngFor="let s of skills">{{ s }}</li>
+       </ul>
+
+        <!--Object Interpolation-->
+    <h3>Address :</h3>
+    <p>{{ address.street }},{{ address.city }} - {{ address.postalCode }} </p>
+ 
+    <!--Any data type Interpolation-->
+    <p>Extra Info : {{ extraInfo }}</p>
+
+
+
+    <!-- Event Binding -->
+     <h2>Event Binding</h2>
+     <button (click)=" hello()"> Click Me</button> &nbsp; &nbsp;
+     <button (click)=" clear()"> Cancel</button> &nbsp; &nbsp;
+     <button (click)="toggleManagerStatus()"> Toggle Manager Status</button>
+     <p>{{ message}}</p>
+
+     <p>Score Count : {{5+5}}</p>
+     <!-- Event binding to functions with return value -->
+      <p>Today's date :  {{convertToDate()}}</p>
+      <p>Addition of 100 & 200 is : {{ add() }}</p>
+
+
+
+      <!--Property Binding - One Way -->
+    <div style="background-color: aqua;">
+        <h2 [innerHtml]="info"></h2>
+        <input type="text" [value]="username" width="20px">
+        <button (click)="updateUsername()">Update User</button>
+    </div>
+
+    <!-- Two-way Data Binding using [(ngModel)] directive-->
+     <div>
+        <h2>Two-way Data Binding</h2>
+        <label for="position">Position : </label>
+        <input type="text" [(ngModel)]="employeePosition" id="position">
+        <p>Updated Position : {{ employeePosition }}</p>
+     </div> 
+     
+</div>

@@ -1,0 +1,45 @@
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-weight: 600;
+  margin: 8px 0 4px 0;
+}
+
+p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #444;
+}

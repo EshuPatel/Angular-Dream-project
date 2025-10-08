@@ -1,0 +1,56 @@
+.notfound-container {
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(145deg, #f5f7fa, #e4ebf5);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notfound-container h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  color: #1976d2;
+  margin: 0;
+}
+
+.notfound-container h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.notfound-container p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.home-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1976d2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+  background-color: #125aa0;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .notfound-container h1 {
+    font-size: 5rem;
+  }
+  .notfound-container h2 {
+    font-size: 1.5rem;
+  }
+}
